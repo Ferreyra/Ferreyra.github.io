@@ -1,0 +1,7 @@
+.borde {
+  border: dotted 1px greenyellow;
+}
+
+.borde-inf {
+  border-bottom: dotted 2px darkgray;
+}
