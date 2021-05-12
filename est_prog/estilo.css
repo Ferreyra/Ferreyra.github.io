@@ -1,0 +1,11 @@
+.borde {
+  border: dotted 1px greenyellow;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.borde-inf {
+  border-bottom: dotted 2px rgb(25, 110, 150);
+}
