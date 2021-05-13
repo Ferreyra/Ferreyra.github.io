@@ -117,5 +117,6 @@ function createPDF(event) {
   document.getElementById('btnDescargar').addEventListener('click', () => {    
     pdf.save(ubicacion +' '+ txtEquipo.value +' '+ inFecha[1] +'.pdf')
     document.getElementById('offcanvasTop').classList.remove('show')
+    window.location.reload()
   })
 }
