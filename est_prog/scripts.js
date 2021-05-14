@@ -36,11 +36,11 @@ function createPDF(event) {
   }  
   pdf.text(lFecha.innerText, 368, 86)
   pdf.text(txtFecha.value, 410, 86)
-  pdf.rect(58, 94, 494, 66)     //58, 64, 494, 66
-  pdf.line(58, 127, 552, 127)   //58, 99, 552, 99
-  pdf.line(305, 94, 305, 160)   //305, 64, 305, 134  Mitad de la tabla 305
-  pdf.line(100, 94, 100, 160)   //100, 64, 100, 134
-  pdf.line(345, 94, 345, 160)   //345, 64, 345, 134  Separador segunda columna
+  pdf.rect(58, 94, 494, 66)     
+  pdf.line(58, 127, 552, 127)   
+  pdf.line(305, 94, 305, 160)   // Mitad de la tabla 305
+  pdf.line(100, 94, 100, 160)   
+  pdf.line(345, 94, 345, 160)   // Separador segunda columna
   
   pdf.rect(90, 164, 215, 129)
   pdf.rect(90, 293, 215, 129)
@@ -50,7 +50,7 @@ function createPDF(event) {
   pdf.rect(337, 164, 215, 129)
   pdf.rect(337, 293, 215, 129)
   pdf.rect(337, 422, 215, 129)
-  pdf.rect(337, 551, 215, 129) //538
+  pdf.rect(337, 551, 215, 129)
 
   pdf.rect(95, 688, 216, 59)
   pdf.setFontSize(10)
@@ -105,8 +105,7 @@ function createPDF(event) {
       y = 554
     }
     if (foto.alt !== "") {
-      let fotoWidth = 209, xOffset = 0 //, r = 1.71
-      console.log(foto.width/foto.height)
+      let fotoWidth = 209, xOffset = 0
       if (foto.width < fotoWidth) {
         xOffset = Math.floor((fotoWidth - foto.width) / 2)
         x += xOffset
