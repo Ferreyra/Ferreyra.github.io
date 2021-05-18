@@ -1,0 +1,17 @@
+{
+  "name": "Reporte mantenimiento",
+  "short_name": "Reportes",
+  "description": "Aplicación wed para generar reportes de mantenimientos preventivos y correctivos con fotografías en formato PDF tamaño carta",
+  "lang": "es",
+  "start_url": "https://ferreyra.github.io/",
+  "display": "browser",
+  "orientation": "landscape-primary",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "https://ferreyra.github.io/icono.png",
+      "sizes": "512x512",
+      "type": "image"
+    }
+  ]
+}
