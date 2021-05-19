@@ -1,2 +1,2 @@
 # Ferreyra.github.io
-Generar reportes de mantenimiento preventivo con imágenes en archivo PDF
+Aplicación wed para generar reportes de mantenimientos preventivos y correctivos con fotografías en formato PDF tamaño carta
