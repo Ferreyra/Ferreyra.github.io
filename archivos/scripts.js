@@ -6,8 +6,8 @@ var Android = false, iOS = false, pdfGenerado = false, local = true
 var pdf
 
 // Client ID and API key from the Developer Console
-var CLIENT_ID = '38796529945-7a6au1vu0ntr565rigmrb0bju1t5nu7k.apps.googleusercontent.com';
-var API_KEY = 'h8l26d9rLuvRgJbQFGbywxNC';
+var CLIENT_ID = '';
+var API_KEY = '';
 
 // Array of API discovery doc URLs for APIs used by the quickstart
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
