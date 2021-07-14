@@ -6,7 +6,7 @@ var Android = false, iOS = false, pdfGenerado = false, local = true
 var pdf
 
 var GoogleAuth;
-var SCOPE = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+var SCOPE = 'https://www.googleapis.com/auth/drive';
 function handleClientLoad() {
     // Load the API's client and auth2 modules.
     // Call the initClient function after the modules load.
@@ -20,7 +20,7 @@ function initClient() {
   // Initialize the gapi.client object, which app uses to make API requests.
   // Get API key and client ID from API Console.
   // 'scope' field specifies space-delimited list of access scopes.
-  idaw = documet.getElementById('---').value
+  idaw = documet.getElementById('gpcid').value + ".apps.googleusercontent.com"
   gapi.client.init({
       'clientId': idaw,
       'discoveryDocs': [discoveryUrl],
