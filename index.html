@@ -168,13 +168,19 @@
   </div> -->
   <footer>
     <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize_button" style="display: none;">Authorize</button>
-    <button id="signout_button" style="display: none;">Sign Out</button>
+    <div class="col-auto">
+      <label class="visually-hidden" for="gcpcid" id="cliente">ID Cliente:</label>
+      <input type="text" class="form-control bg-dark text-white py-1" id="gpcid" placeholder="ID Cliente" required>
+    </div>
+    <button id="sign-in-or-out-button" style="margin-left: 25px">Sign In/Authorize</button>
+    <button id="revoke-access-button" style="display: none; margin-left: 25px">Revoke access</button>
+    <div id="auth-status" style="display: inline; padding-left: 25px"></div><hr>
     <pre id="content" style="white-space: pre-wrap;"></pre>
   </footer>
   <script src="archivos/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
   <script src="archivos/scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script async defer src="https://apis.google.com/js/api.js"
   onload="this.onload=function(){};handleClientLoad()"></script>
 </body>
