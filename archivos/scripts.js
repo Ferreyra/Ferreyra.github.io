@@ -20,7 +20,7 @@ function initClient() {
   // Initialize the gapi.client object, which app uses to make API requests.
   // Get API key and client ID from API Console.
   // 'scope' field specifies space-delimited list of access scopes.
-  idaw = documet.getElementById('gpcid').value + ".apps.googleusercontent.com"
+  var idaw = documet.getElementById('gpcid').value + ".apps.googleusercontent.com"
   gapi.client.init({
       'clientId': idaw,
       'discoveryDocs': [discoveryUrl],
