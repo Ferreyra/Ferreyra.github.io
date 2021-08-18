@@ -1,2 +1,2 @@
-# Ferreyra.github.io
-Aplicación wed para generar reportes de mantenimientos preventivos y correctivos con fotografías en formato PDF tamaño carta
+# ferreyra.github.io
+Aplicación wed emulacion de juego basta
