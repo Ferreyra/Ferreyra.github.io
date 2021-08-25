@@ -1,0 +1,242 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+/* ====  VARIABLES  ==== */
+:root {
+  /* --tl1: 'nombre'. tipo-letra; */
+  --fondo: rgb(0, 0, 0);
+  --contw: 1200px;
+}
+
+/* ====  GRID  ==== */
+.grid {
+  display: grid;
+  gap: 14px;
+  margin: 8px;
+}
+/* --- Tamaño grande --- */
+.col-1 { grid-template-columns: repeat(1, 1fr); }
+.col-2 { grid-template-columns: repeat(2, 1fr); }
+.col-3 { grid-template-columns: repeat(3, 1fr); }
+.col-4 { grid-template-columns: repeat(4, 1fr); }
+.col-5 { grid-template-columns: repeat(5, 1fr); }
+.col-6 { grid-template-columns: repeat(6, 1fr); }
+
+.span-1 { grid-column: span 1; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: span 4; }
+.span-5 { grid-column: span 5; }
+.span-6 { grid-column: span 6; }
+/* ====        ==== */
+
+@font-face {
+  font-family: 'Sweet';
+  src: url('sweet-n-sticky.regular.ttf') format('opentype');
+
+}
+@font-face {
+  font-family: 'FredokaOne';
+  src: url('FredokaOne-Regular.ttf') format('opentype');
+
+}
+
+body {
+  background: var(--fondo);
+  /*height: ;   /* Alto de la paantalla dependiendo del dispositivo */
+}
+
+/* ===  CONTENEDORES === */
+.contndr {
+  max-width: 92%;
+  width: var(--contw);
+  margin: auto;
+  overflow: hidden;
+  border: 1px dashed rgb(255, 251, 0);
+}
+.contndrf {
+  width: 100%;
+  padding: 0 40px;
+  margin: auto;
+}
+
+/* ===  FORMULARIO  === */
+form .input-gp { 
+  width: 100%;
+  height: 50px;
+}
+
+form .input-gp .txtInp {
+  position: relative;
+  display: block;
+}
+form .input-gp input {
+  width: 100%;
+  color:rgb(203, 225, 255);
+  font-size: 25px;
+  padding-top: 6px;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 2px solid rgb(0, 68, 255);
+}
+form .input-gp .etiq {
+  pointer-events: none;
+  position: relative;
+  color: rgb(183, 253, 230);
+  font-size: 24px;
+  top: -29px;
+  left: 3px;
+  width: 100%;
+  height: 100%;  
+}
+.input-gp input:focus + .etiq,
+.input-gp input:valid + .etiq { 
+  width: 95%;
+  height: 92%;
+  top: -46px;
+  font-size: 14px;
+  color: #2073df;
+  background: none;
+  transition: top, font-size;
+  transition-duration: 25ms;
+  transition-delay: 0s;
+}
+
+/* ===  COMPONENTES  === */
+.card {
+  padding: 40px;
+  background: rgb(212, 211, 211);
+  border-radius: 6px;
+  box-shadow: 0px, 0px 30px rgba(221,221,221,0.3);
+}
+.boton {
+  display: flex;
+  justify-content: center; 
+  height: 46px;
+}
+.boton button {
+  color: #19ff2d;
+  width: 4em;
+  font-family: 'Sweet';
+  font-weight: bold;
+  padding-left: 12px;
+  padding-bottom: 5px;
+  letter-spacing: 6px;
+  font-size: 30px;
+  border: 1px solid currentColor;
+  background-color: transparent;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+}
+.nav .contndr {
+  background: mediumblue;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+.nav a {
+  color: rgb(190, 225, 229);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 15px 18px;
+  transition: .3s ease all;
+  font-size: 1.1rem;
+}
+.menu {
+  padding: 0px 15px;
+  background: rgb(60, 80, 74);
+  border-radius: 6px;
+  box-shadow: 0px, 0px 30px rgba(221,221,221,0.3);
+}
+.menu .titulo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.font1 {
+  font-family: 'Sweet';
+  letter-spacing: 3px;
+}
+.font2 {
+  font-family: 'FredokaOne';
+  letter-spacing: 3px;
+}
+
+/*  ===  ANIMACION TEXTO  ===  */
+.letra {
+  position: relative;
+}
+h1.ml8 {
+  font-weight: 900;
+  font-size: 4.5em;
+  color: #fff;
+  height: 1em;
+}
+
+.ml8 .letters-container {
+  position: absolute;
+  margin: auto;
+  height: .5em;
+  left: 45%;
+  right: 0;
+}
+
+.ml8 .letters {
+  font-family: 'FredokaOne';
+  font-weight: 100;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  line-height: 0.9em;
+  right: -0.1em;
+  /* top: -0.2em; */
+}
+/* .ml8 .bang {
+  font-size: 1.4em;
+  top: auto;
+  left: -0.06em;
+} */
+
+.ml8 .circle {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.ml8 .circle-white {
+  width: 2.1em;
+  height: 2.1em;
+  border: 2px dashed rgb(255, 255, 255);
+  border-radius: 2em;
+}
+
+.ml8 .circle-dark {
+  width: 1.7em;
+  height: 1.7em;
+  background-color: #4f7b86;
+  border-radius: 3em;
+  z-index: 1;
+}
+
+.ml8 .circle-dark-dashed {
+  border-radius: 2.4em;
+  background-color: transparent;
+  border: 2px dashed #4f7b86;
+  width: 1.9em;
+  height: 1.9em;
+}
