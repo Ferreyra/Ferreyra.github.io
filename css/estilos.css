@@ -58,7 +58,7 @@ body {
   width: var(--contw);
   margin: auto;
   overflow: hidden;
-  border: 1px dashed rgb(255, 251, 0);
+  /*border: 1px dashed rgb(255, 251, 0);*/
 }
 .contndrf {
   width: 100%;
@@ -189,7 +189,7 @@ h1.ml8 {
   position: absolute;
   margin: auto;
   height: .5em;
-  left: calc(50%-0.3em);
+  left: calc(50%-5px);
   right: 0;
 }
 
