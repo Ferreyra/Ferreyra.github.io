@@ -1,0 +1,8 @@
+{
+  openFile: "js/app.js";
+  newWindow: false; 
+  hideDevTools: true;
+  devToolsHeight: 3;
+  initialPath: "index.html";
+  origin: "ghhhggj"; // Set the origin URL of your StackBlitz EE server
+}
