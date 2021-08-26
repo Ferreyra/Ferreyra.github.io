@@ -189,7 +189,7 @@ h1.ml8 {
   position: absolute;
   margin: auto;
   height: .5em;
-  left: 45%;
+  left: calc(50%-0.3em);
   right: 0;
 }
 
