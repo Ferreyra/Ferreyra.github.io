@@ -38,13 +38,11 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 
 @font-face {
   font-family: 'Sweet';
-  src: url('../fonts/sweet-n-sticky.regular.ttf') format('opentype');
-
+  src: url('fonts/sweet-n-sticky.ttf') format('opentype');
 }
 @font-face {
   font-family: 'FredokaOne';
-  src: url('../fonts/FredokaOne-Regular.ttf') format('opentype');
-
+  src: url('fonts/FredokaOne.ttf') format('opentype');
 }
 
 body {
@@ -58,7 +56,7 @@ body {
   width: var(--contw);
   margin: auto;
   overflow: hidden;
-  /*border: 1px dashed rgb(255, 251, 0);*/
+  border: 1px dashed rgb(255, 251, 0);
 }
 .contndrf {
   width: 100%;
@@ -71,7 +69,6 @@ form .input-gp {
   width: 100%;
   height: 50px;
 }
-
 form .input-gp .txtInp {
   position: relative;
   display: block;
@@ -90,17 +87,18 @@ form .input-gp .etiq {
   pointer-events: none;
   position: relative;
   color: rgb(183, 253, 230);
-  font-size: 24px;
+  z-index: 0;
+  font-size: 21px;
   top: -29px;
   left: 3px;
   width: 100%;
-  height: 100%;  
+  height: 100%;
 }
 .input-gp input:focus + .etiq,
 .input-gp input:valid + .etiq { 
   width: 95%;
   height: 92%;
-  top: -46px;
+  top: -52px;
   font-size: 14px;
   color: #2073df;
   background: none;
@@ -112,27 +110,75 @@ form .input-gp .etiq {
 /* ===  COMPONENTES  === */
 .card {
   padding: 40px;
-  background: rgb(212, 211, 211);
+  background: rgb(238, 243, 238);
+
   border-radius: 6px;
   box-shadow: 0px, 0px 30px rgba(221,221,221,0.3);
 }
 .boton {
   display: flex;
-  justify-content: center; 
-  height: 46px;
+  justify-content: center;
+  align-items: center;
 }
-.boton button {
-  color: #19ff2d;
-  width: 4em;
+.boton a {
+  position: relative;
+  width: 140px;
+  height: 45px;
+  display: inline-block;
+  background: white;
+  margin: 20px;
+}
+.boton a:before,
+.boton a:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #f00;
+  transition: 0.5%;
+}
+.boton a:nth-child(1):before,
+.boton a:nth-child(1):after {
+  background: linear-gradient(45deg,#00ccff,#0e1538,#0e1538,#12d400);
+}
+.boton a:hover:before {
+  inset: -3px;
+}
+.boton a:hover:after {
+  inset: -3px;
+  filter: blur(10px);
+}
+.boton a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: #0e1538;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Sweet';
-  font-weight: bold;
-  padding-left: 12px;
-  padding-bottom: 5px;
-  letter-spacing: 6px;
-  font-size: 30px;
-  border: 1px solid currentColor;
-  background-color: transparent;
+  font-size: 28px;
+  letter-spacing: 5px;
+  color: white;
+  padding-bottom: 8px;
+  padding-left: 6px;
+  border: 1px solid #040a29;
+  overflow: hidden;
 }
+.boton a span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.075);
+  transform: skew(25deg);
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -183,16 +229,12 @@ h1.ml8 {
   font-size: 4.5em;
   color: #fff;
   height: 1em;
+  display: flex;
+  justify-content: center;  
 }
-
 .ml8 .letters-container {
   position: absolute;
-  margin: auto;
-  height: .5em;
-  left: calc(50% - 5px);
-  right: 0;
 }
-
 .ml8 .letters {
   font-family: 'FredokaOne';
   font-weight: 100;
@@ -200,15 +242,12 @@ h1.ml8 {
   z-index: 2;
   display: inline-block;
   line-height: 0.9em;
-  right: -0.1em;
-  /* top: -0.2em; */
 }
 /* .ml8 .bang {
   font-size: 1.4em;
   top: auto;
   left: -0.06em;
 } */
-
 .ml8 .circle {
   position: absolute;
   margin: auto;
@@ -217,14 +256,12 @@ h1.ml8 {
   top: 0;
   bottom: 0;
 }
-
 .ml8 .circle-white {
   width: 2.1em;
   height: 2.1em;
   border: 2px dashed rgb(255, 255, 255);
   border-radius: 2em;
 }
-
 .ml8 .circle-dark {
   width: 1.7em;
   height: 1.7em;
@@ -232,7 +269,6 @@ h1.ml8 {
   border-radius: 3em;
   z-index: 1;
 }
-
 .ml8 .circle-dark-dashed {
   border-radius: 2.4em;
   background-color: transparent;
