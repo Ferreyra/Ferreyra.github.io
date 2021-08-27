@@ -97,7 +97,7 @@ form .input-gp .etiq {
 .input-gp input:valid + .etiq { 
   width: 95%;
   height: 92%;
-  top: -52px;
+  top: -56px;
   font-size: 14px;
   color: #2073df;
   background: none;
