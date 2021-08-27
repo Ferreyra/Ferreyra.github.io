@@ -38,11 +38,11 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 
 @font-face {
   font-family: 'Sweet';
-  src: url('fonts/sweet-n-sticky.ttf') format('opentype');
+  src: url('../fonts/sweet-n-sticky.ttf') format('opentype');
 }
 @font-face {
   font-family: 'FredokaOne';
-  src: url('fonts/FredokaOne.ttf') format('opentype');
+  src: url('../fonts/FredokaOne.ttf') format('opentype');
 }
 
 body {
